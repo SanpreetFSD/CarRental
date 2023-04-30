@@ -3,12 +3,13 @@ const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
 const addUserController = async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, password, email, role } = req.body;
   const hash = await bcrypt.hash(password, saltRounds);
   let userobj = {
     username: username,
-    email: email,
     password: hash,
+    email: email,    
+    role: role
   };
   UserModel.find({ username }).then((data) => {
     if (data.length == 0) {
