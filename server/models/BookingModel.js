@@ -14,16 +14,14 @@ const BookingSchema = new Schema({
     type: String,
     required: true,
   },
-
   booking_price: {
     type: Number,
     required: true,
   },
-
   booking_date: {
     type: Date,
     required: false,
-  },
+  }
 });
 
 const BookingModel = mongoose.model("Booking", BookingSchema);

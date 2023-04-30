@@ -33,7 +33,6 @@ const CarsSchema = new Schema({
     type: String,
     required: true,
   }
-  
 });
 
 const CarsModel = mongoose.model("Car", CarsSchema);
