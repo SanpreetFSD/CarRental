@@ -8,7 +8,7 @@ const port = process.env.PORT;
 const mongoose = require("mongoose");
 
 mongoose
-  .connect(process.env.MONGOOSE_URL)
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("connected to mongoDB"));
 
 const UserRouter = require("./routes/UserRouter");

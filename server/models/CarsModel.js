@@ -4,36 +4,41 @@ const Schema = mongoose.Schema;
 const CarsSchema = new Schema({
   userid: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "user",
+    ref: "user"
   },
   owner: {
     type: String,
+    required: true
   },
   carname: {
     type: String,
-    required: true,
+    required: true
   },
   company: {
     type: String,
-    required: true,
+    required: true
   },
   cartype: {
     type: String,
-    required: true,
+    required: true
   },
   rental_price: {
     type: Number,
-    required: true,
+    required: true
   },
   image: {
     type: String,
-    required: false,
+    required: false
   },
   booking_status: {
     type: String,
-    required: true,
+    required: true
   }
-});
+},
+  {
+    timestamps: true,
+  }
+);
 
 const CarsModel = mongoose.model("Car", CarsSchema);
 

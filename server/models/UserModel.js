@@ -4,21 +4,25 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
   username: {
     type: String,
-    required: true,
+    required: true
   },
   password: {
     type: String,
-    required: true,
+    required: true
   },
   email: {
     type: String,
-    required: true,
+    required: true
   },  
   role: {
     type: String,
-    required: true,
+    required: true
   }
-});
+},
+  {
+    timestamps: true,
+  }
+);
 
 const UserModel = mongoose.model("User", UserSchema);
 
