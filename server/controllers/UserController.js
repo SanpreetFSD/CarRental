@@ -40,7 +40,6 @@ const updateUserController = async(req, res) => {
     }catch(error){
       res.send({message: "Please provide a valid username to update the details!"});
     }
-    
   });
 };
 
@@ -48,3 +47,4 @@ module.exports = {
   addUserController,
   updateUserController
 };
+
